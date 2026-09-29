@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name= "todo_columns")
+@Table(name = "todo_columns")
 public class TodoColumn {
 
     @Id
@@ -16,17 +16,15 @@ public class TodoColumn {
     private String title;
 
     @Column(name = "sort_order", nullable = false)
-    private int sortOrder;
+    private int order;
 
     protected TodoColumn() {
-
     }
 
-
-    public TodoColumn(String id,String title, int sortOrder) {
+    public TodoColumn(String id, String title, int order) {
         this.id = id;
         this.title = title;
-        this.sortOrder = sortOrder;
+        this.order = order;
     }
 
     @PrePersist
@@ -37,9 +35,6 @@ public class TodoColumn {
     public String getId() { return id; }
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
-    public int getOrder() { return sortOrder; }
-    public void setOrder(int order) { this.sortOrder = order; }
-
-
-
+    public int getOrder() { return order; }
+    public void setOrder(int order) { this.order = order; }
 }

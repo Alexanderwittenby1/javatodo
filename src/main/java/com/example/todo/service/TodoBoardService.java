@@ -1,6 +1,5 @@
 package com.example.todo.service;
 
-
 import com.example.todo.domain.TodoCard;
 import com.example.todo.domain.TodoCardRepository;
 import com.example.todo.domain.TodoColumn;
@@ -19,7 +18,6 @@ import java.util.List;
 public class TodoBoardService {
 
     private static final int BOARD_VERSION = 1;
-    private static final String DEFAULT_COLUMN = "todo";
 
     private final TodoColumnRepository columns;
     private final TodoCardRepository cards;
